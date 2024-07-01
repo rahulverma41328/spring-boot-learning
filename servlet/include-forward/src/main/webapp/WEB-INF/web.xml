@@ -30,4 +30,41 @@
     <servlet-name>success</servlet-name>
     <url-pattern>/success</url-pattern>
   </servlet-mapping>
+
+<!--  sum-->
+
+  <servlet>
+    <servlet-name>sum</servlet-name>
+    <servlet-class>com.servlet.attr.Sum</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>sum</servlet-name>
+    <url-pattern>/sum</url-pattern>
+  </servlet-mapping>
+
+
+<!--  sum 2-->
+
+  <servlet>
+    <servlet-name>sum1</servlet-name>
+    <servlet-class>com.servlet.attr.Sum1</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>sum1</servlet-name>
+    <url-pattern>/sum1</url-pattern>
+  </servlet-mapping>
+
+<!--  servlet 1 -->
+
+  <servlet>
+    <servlet-name>servlet1</servlet-name>
+    <servlet-class>com.servlet.session.servlet1</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>servlet1</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
 </web-app>
