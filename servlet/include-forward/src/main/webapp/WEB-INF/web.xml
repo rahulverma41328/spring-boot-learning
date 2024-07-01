@@ -67,4 +67,16 @@
     <servlet-name>servlet1</servlet-name>
     <url-pattern>/servlet1</url-pattern>
   </servlet-mapping>
+
+<!--  servlet 2-->
+
+  <servlet>
+    <servlet-name>servlet2</servlet-name>
+    <servlet-class>com.servlet.session.Servlet2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>servlet2</servlet-name>
+    <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
 </web-app>
