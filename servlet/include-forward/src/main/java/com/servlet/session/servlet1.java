@@ -3,6 +3,7 @@ package com.servlet.session;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -10,6 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.sql.rowset.serial.SerialException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 
 public class servlet1 extends HttpServlet {
@@ -18,16 +21,24 @@ public class servlet1 extends HttpServlet {
             ServletException, IOException {
         response.setContentType("text/html");
 
-        try (PrintWriter out = response.getWriter()){
+        PrintWriter out = response.getWriter();
             out.println("<h1>this is servlet process request</h2>");
 
             String name = request.getParameter("name");
             out.println("<br><br>");
             out.println("<h1>this is servlet 1</h1>");
+
+            // encode name
+       // String encodedName = URLEncoder.encode(name, StandardCharsets.UTF_8.toString());
+        // create a cookie
+        Cookie c = new Cookie("user_name",name);
+        response.addCookie(c);
+
             out.println("<h1>Hello, " + name + "welcome to my website..</h1>");
             out.println("<h1><a href='servlet2'>Go to servlet 2</a></h1>");
 
-        }
+
+
     }
 
     @Override
